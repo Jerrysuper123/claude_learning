@@ -84,4 +84,16 @@ These commands are built-in functions to manage the Claude session:
 - **Checkpoints**: Claude creates internal checkpoints, allowing you to undo large-scale automated changes if the generated code is incorrect.
 - **Context Management**: It is vital to `clear` or `compact` regularly. If the context window (200k tokens) fills up, Claude may begin to "hallucinate" or forget earlier architectural constraints.
 
+
+In Claude Code, skills.md is a configuration file used to store custom reusable instructions or "tools" that you want Claude to remember across different sessions.
+
+Key Uses:
+Persistent Custom Tools: You can define specific workflows (like "how to run my custom test suite") that Claude will treat as a built-in capability.
+
+Task Automation: It allows you to create "shorthand" commands for complex, repetitive terminal sequences.
+
+Behavioral Guidance: While claude.md is for project-specific facts, skills.md is for how you want Claude to perform technical actions (e.g., "Always use pnpm instead of npm" or "Format my code using this specific linter command").
+
+In short: If claude.md is the project’s memory, skills.md is the agent’s technical training manual.
+
 [file-tag: youtube-IuyVVtr1uhY]
